@@ -36,9 +36,6 @@ export const getServerSideProps = async ({ query }) => {
     return v;
   });
 
-  console.log(query.q);
-  // console.log(items);
-
   return {
     props: { items: items },
   };

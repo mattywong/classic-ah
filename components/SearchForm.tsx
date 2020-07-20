@@ -21,23 +21,28 @@ export const SearchForm = (props) => {
 
   const handleSubmit = React.useMemo(() => {
     return createSubmitHandler((values) => {
-    //   console.log(values);
+      //   console.log(values);
 
       push(`/search?q=${values.query}`);
     });
   }, []);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="query">Query</label>
-      <input
-        id="query"
-        name="query"
-        type="text"
-        value={values.query || ""}
-        {...field}
-      />
-      <button type="submit">Submit</button>
+    <form className="form-inline" onSubmit={handleSubmit}>
+      <div className="form-group mr-2">
+        <label htmlFor="query">Search</label>
+        <input
+          id="query"
+          name="query"
+          className="form-control"
+          type="text"
+          value={values.query || ""}
+          {...field}
+        />
+      </div>
+      <button className="btn btn-primary" type="submit">
+        Submit
+      </button>
     </form>
   );
 };
