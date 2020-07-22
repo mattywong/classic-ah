@@ -1,4 +1,4 @@
-interface ItemPrice {
+export interface ItemPrice {
   slug: string;
   itemId: number;
   name: string;

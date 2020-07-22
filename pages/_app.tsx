@@ -2,6 +2,15 @@
 import Head from "next/head";
 import { SearchForm } from "~/components";
 
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle`
+
+  // body {
+  //   background: #1f1f1f;
+  // }
+`;
+
 export default ({ Component, pageProps }) => {
   return (
     <>
@@ -13,14 +22,19 @@ export default ({ Component, pageProps }) => {
           crossOrigin="anonymous"
         />
       </Head>
-
-      <main>
-        <header className="mb-3">
+      <GlobalStyles />
+      <nav className="py-2 mb-3 bg-dark">
+        <div className="container text-white">
           <SearchForm />
-        </header>
-      </main>
+        </div>
+      </nav>
 
-      <Component {...pageProps} />
+      {/* <header>
+        
+      </header> */}
+      <main className="container">
+        <Component {...pageProps} />
+      </main>
     </>
   );
 };

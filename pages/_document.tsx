@@ -2,6 +2,8 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 
 import { ServerStyleSheet } from "styled-components";
 
+global.whTooltips = { colorLinks: true, iconizeLinks: true, renameLinks: true };
+
 export default class CustomDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
@@ -36,6 +38,8 @@ export default class CustomDocument extends Document {
         <body>
           <Main />
           <NextScript />
+
+          <script src="https://wow.zamimg.com/widgets/power.js"></script>
         </body>
       </Html>
     );

@@ -3,7 +3,7 @@ import * as React from "react";
 import { useRouter } from "next/router";
 
 import { InferGetServerSidePropsType } from "next";
-import { getItemPrice } from "nexus/item";
+import { getItemPrice } from "nexus";
 
 import { GoldAmount } from "~/components";
 

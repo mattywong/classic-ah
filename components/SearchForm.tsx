@@ -30,7 +30,7 @@ export const SearchForm = (props) => {
   return (
     <form className="form-inline" onSubmit={handleSubmit}>
       <div className="form-group mr-2">
-        <label htmlFor="query">Search</label>
+        <label className="sr-only" htmlFor="query">Search</label>
         <input
           id="query"
           name="query"
