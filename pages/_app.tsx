@@ -3,6 +3,7 @@ import Head from "next/head";
 import { SearchForm } from "~/components";
 
 import { createGlobalStyle } from "styled-components";
+import { ProgressBar } from "components/ProgressBar";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -23,6 +24,7 @@ export default ({ Component, pageProps }) => {
         />
       </Head>
       <GlobalStyles />
+      <ProgressBar />
       <nav className="py-2 mb-3 bg-dark">
         <div className="container text-white">
           <SearchForm />
